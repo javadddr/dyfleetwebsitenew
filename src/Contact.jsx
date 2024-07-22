@@ -160,6 +160,7 @@ export default function Contact() {
                 >
                   <option>US</option>
                   <option>CA</option>
+                  <option>UK</option>
                   <option>EU</option>
                 </select>
                 <ChevronDownIcon
