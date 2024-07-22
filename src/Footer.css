@@ -50,14 +50,26 @@
   color: #CCD6F6; 
   transform: scale(1.1);
 }
-
+.footer-company-info p{
+  font-size: 16px;
+  }
 @media (max-width: 768px) {
   .footer-links {
     flex-direction: column; 
   }
-
+  .footer-company-info p{
+    font-size: 13px;
+    }
+    .footer-company-info {
+    
+      font-size: 13px;
+    }
   .footer-link {
     margin: 5px 0;
+    font-size: 13px;
+  }
+  .footer-content p{
+    font-size: 13px;
   }
 }
 
@@ -85,9 +97,7 @@
 }
 
 
-.footer-company-info p{
-font-size: 16px;
-}
+
 
 .footer-company-info span{
   color: #4fd1c5;

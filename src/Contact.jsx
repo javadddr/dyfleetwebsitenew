@@ -152,7 +152,9 @@ export default function Contact() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+              Email <span className="text-red-500 text-xl">*</span>
+            </label>
             <div className="mt-2.5">
               <input
                 id="email"
@@ -165,25 +167,14 @@ export default function Contact() {
               />
             </div>
           </div>
+
           <div className="sm:col-span-2">
             <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
             <div className="relative mt-2.5">
               <div className="absolute inset-y-0 left-0 flex items-center">
                 <label htmlFor="country" className="sr-only">Country</label>
-                <select
-                  id="country"
-                  name="country"
-                  className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                >
-                  <option>US</option>
-                  <option>CA</option>
-                  <option>UK</option>
-                  <option>EU</option>
-                </select>
-                <ChevronDownIcon
-                  aria-hidden="true"
-                  className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
-                />
+           
+            
               </div>
               <input
                 id="phone-number"
@@ -192,26 +183,27 @@ export default function Contact() {
                 autoComplete="tel"
                 value={phone}
                 onChange={(e) => setPhoneNumber(e.target.value)}
-                className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
-              Message
-            </label>
-            <div className="mt-2.5">
-              <textarea
-                id="message"
-                name="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                rows={4}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-               
-              />
-            </div>
+          <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+            Message <span className="text-red-500 text-xl">*</span>
+          </label>
+          <div className="mt-2.5">
+            <textarea
+              id="message"
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              rows={4}
+              required
+              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            />
           </div>
+        </div>
+
           <Field className="flex gap-x-4 sm:col-span-2">
            
             <Label className="text-sm leading-6 text-gray-600">
@@ -238,25 +230,13 @@ export default function Contact() {
   <ModalContent>
     {(onClose) => (
       <>
-        <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+        <ModalHeader className="flex flex-col gap-1">Thank you!</ModalHeader>
         <ModalBody>
+        
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nullam pulvinar risus non risus hendrerit venenatis.
-            Pellentesque sit amet hendrerit risus, sed porttitor quam.
+          We have received your request and will get back to you shortly. Our response time typically ranges from 30 minutes to 3 hours.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nullam pulvinar risus non risus hendrerit venenatis.
-            Pellentesque sit amet hendrerit risus, sed porttitor quam.
-          </p>
-          <p>
-            Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit
-            dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. 
-            Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. 
-            Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur 
-            proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
-          </p>
+        
         </ModalBody>
         <ModalFooter>
           <Button color="danger" variant="light" onPress={onClose}>
