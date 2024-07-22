@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '200': '50rem',
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: 0, transform: 'translateY(-20px)' },

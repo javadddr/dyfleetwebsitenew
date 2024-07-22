@@ -4,6 +4,7 @@ import HomeTop from "./HomeTop";
 import HomeB from "./HomeB";
 import HomeB1 from "./HomeB1";
 import HomeB2 from "./HomeB2";
+
 import Pricing from "./Pricing";
 import HomeB3 from "./HomeB3";
 import HomeB4 from "./HomeB4";
@@ -104,6 +105,7 @@ export default function Home() {
       <HomeB3/>
       <HomeB4/>
       <Pricing/>
+     
       
    </div>
   );

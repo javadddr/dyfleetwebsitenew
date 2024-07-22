@@ -38,7 +38,7 @@ console.log(isMenuOpen)
 
         <NavbarBrand>
           <img src={logo} alt="Logo" className="h-6 w-6 mr-1" />
-          <p className="font-bold text-indigo-500 ">DYNAMOFLEET</p>
+          <p className="font-bold text-indigo-1200 ">DYNAMOFLEET</p>
         </NavbarBrand>
       </NavbarContent>
 

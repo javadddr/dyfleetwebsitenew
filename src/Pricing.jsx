@@ -31,9 +31,9 @@ export default function Pricing() {
   const pricePerVehicle = selectedKey === "annually" ? 4 : 5;
 
   return (
-    <div className={`relative isolate px-6 pt-14 overflow-hidden lg:px-8 ${isLoaded ? 'animate-fadeIn' : 'opacity-0'}`}>
+    <div className={`relative isolate px-6 pt-6 overflow-hidden lg:px-8 ${isLoaded ? 'animate-fadeIn' : 'opacity-0'}`}>
       <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-0 lg:px-8">
           <div className="mx-auto max-w-2xl sm:text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple Pricing and Full Access</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -70,7 +70,7 @@ export default function Pricing() {
                       aria-label="Options"
                       color="primary"
                       variant="bordered"
-                      className="flex justify-center m-10"
+                      className="flex justify-center m-3"
                       selectedKey={selectedKey}
                       onSelectionChange={handleTabChange}
                     >
