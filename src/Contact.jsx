@@ -3,6 +3,8 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { Field, Label } from '@headlessui/react';
 import { Link } from 'react-router-dom';
 
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
+
 export default function Contact() {
   const [agreed, setAgreed] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -15,15 +17,16 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
+  
     if (!first_name || !last_name || !email || !message) {
       return;
     }
-
+  
     setIsLoading(true);
-
+  
     setTimeout(() => {
       const customerMessage = {
         first_name,
@@ -33,9 +36,9 @@ export default function Contact() {
         company,
         message,
       };
-
+  
       console.log(customerMessage);
-
+  
       fetch('https://billing.dynamofleet.com/contact', {
         method: 'POST',
         headers: {
@@ -47,6 +50,7 @@ export default function Contact() {
       .then((response) => {
         if (response.ok) {
           setIsPopupVisible(true);
+          handleOpen('blur');  // Call handleOpen to open the modal
         } else {
           console.error('Failed to send the message');
         }
@@ -57,7 +61,7 @@ export default function Contact() {
       .finally(() => {
         setIsLoading(false);
       });
-
+  
       setFirstName('');
       setLastName('');
       setEmail('');
@@ -66,10 +70,23 @@ export default function Contact() {
       setMessage('');
     }, 2000);
   };
+  
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+
+
+  const {isOpen, onOpen, onClose} = useDisclosure();
+  const [backdrop, setBackdrop] = React.useState('blur')
+
+  const backdrops = [ "blur"];
+
+  const handleOpen = (backdrop) => {
+    setBackdrop(backdrop)
+    onOpen();
+  }
+
 
   return (
     <div className={`isolate bg-white px-6 py-24 sm:py-32 lg:px-8 justify-center relative ${isLoaded ? 'animate-fadeIn' : 'opacity-0'}`}>
@@ -206,14 +223,51 @@ export default function Contact() {
           </Field>
         </div>
         <div className="mt-10">
-          <button
-            type="submit"
-            className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Let's talk
-          </button>
+        <button
+          type="submit"
+          className={`block w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm ${
+            isLoading ? 'bg-gray-400 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-500'
+          } focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
+          disabled={isLoading}
+        >
+          {isLoading ? 'Sending...' : "Let's talk"}
+        </button>
         </div>
       </form>
+      <Modal backdrop={backdrop} isOpen={isOpen} onClose={onClose}>
+  <ModalContent>
+    {(onClose) => (
+      <>
+        <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+        <ModalBody>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nullam pulvinar risus non risus hendrerit venenatis.
+            Pellentesque sit amet hendrerit risus, sed porttitor quam.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nullam pulvinar risus non risus hendrerit venenatis.
+            Pellentesque sit amet hendrerit risus, sed porttitor quam.
+          </p>
+          <p>
+            Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit
+            dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. 
+            Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. 
+            Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur 
+            proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
+          </p>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="danger" variant="light" onPress={onClose}>
+            Close
+          </Button>
+        </ModalFooter>
+      </>
+    )}
+  </ModalContent>
+</Modal>
+
     </div>
   )
 }
