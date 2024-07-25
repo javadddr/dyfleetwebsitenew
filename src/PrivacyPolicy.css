@@ -16,3 +16,8 @@ font-size: 15px;
   font-size: 19px;
   color: blue;
 }
+/* styles.css */
+.custom-font {
+  font-family:'Roboto','Roboto', sans-serif;
+  
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {Button} from "@nextui-org/react";
-
+import "./PrivacyPolicy.css"
 
 export default function HomeTop() {
 
@@ -28,7 +28,7 @@ export default function HomeTop() {
         <div className="mx-auto max-w-2xl py-16 sm:py-20 lg:py-10">
          
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-600 sm:text-6xl custom-font">
             Manage and monitor every aspect of your fleet.
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
