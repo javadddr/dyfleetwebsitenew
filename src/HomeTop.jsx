@@ -28,7 +28,7 @@ export default function HomeTop() {
         <div className="mx-auto max-w-2xl py-16 sm:py-20 lg:py-10">
          
           <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-600 sm:text-6xl custom-font ">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl custom-font ">
         Manage and monitor every aspect of your <span className="text-blue-400">fleet</span>.
       </h1>
 
