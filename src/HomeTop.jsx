@@ -28,10 +28,11 @@ export default function HomeTop() {
         <div className="mx-auto max-w-2xl py-16 sm:py-20 lg:py-10">
          
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-600 sm:text-6xl custom-font">
-            Manage and monitor every aspect of your fleet.
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-600 sm:text-6xl custom-font ">
+        Manage and monitor every aspect of your <span className="text-blue-400">fleet</span>.
+      </h1>
+
+            <p className="mt-6 text-base leading-8 text-gray-600">
             DynamoFleet is the ideal fleet management software, providing comprehensive solutions to manage both your vehicles and drivers. Enhance cost efficiency, and assume full control over your fleet management.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
