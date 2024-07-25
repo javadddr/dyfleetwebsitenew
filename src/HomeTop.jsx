@@ -1,13 +1,29 @@
 import React, { useEffect, useState } from "react";
 import {Button} from "@nextui-org/react";
 import "./PrivacyPolicy.css"
-
+import Typed from 'typed.js';
 export default function HomeTop() {
 
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    const options = {
+      strings: ['fleet', 'vehicles', 'drivers'],
+      typeSpeed: 280,
+      backSpeed: 180,
+      loop: true,
+    };
+
+    const typed = new Typed('#typed', options);
+
+    // Cleanup
+    return () => {
+      typed.destroy();
+    };
   }, []);
   return (
   
@@ -28,8 +44,8 @@ export default function HomeTop() {
         <div className="mx-auto max-w-2xl py-16 sm:py-20 lg:py-10">
          
           <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl custom-font ">
-        Manage and monitor every aspect of your <span className="text-blue-400">fleet</span>.
+          <h1 className="text-4xl font-bold tracking-tight text-gray-600 sm:text-6xl custom-font">
+        Manage and monitor every aspect of your <br></br> <span id="typed" className="text-blue-400"></span>.
       </h1>
 
             <p className="mt-6 text-base leading-8 text-gray-600">
