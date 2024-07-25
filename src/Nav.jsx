@@ -27,7 +27,7 @@ console.log(isMenuOpen)
   };
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered  isMenuOpen={isMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered  isMenuOpen={isMenuOpen} >
       <NavbarContent>
       <NavbarMenuToggle
   aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -50,17 +50,17 @@ console.log(isMenuOpen)
           <Link className="font-light text-inherit hover:text-blue-600 " to="/pricing">Pricing</Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="font-light text-lime-950 hover:text-blue-600" to="/contact">Contact</Link>
+          <Link className="font-light text-inherit hover:text-blue-600" to="/contact">Contact</Link>
         </NavbarItem>
         <div className="border-l border-gray-300 h-8 mx-1"></div>
         <NavbarItem>
-          <a className="font-light text-lime-950 hover:text-blue-600" href="https://www.app.dynamofleet.com/demo" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <a className="font-light text-inherit hover:text-blue-600" href="https://www.app.dynamofleet.com/demo" target="_blank" rel="noopener noreferrer">Learn more</a>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <a className="font-light text-lime-950 hover:text-blue-600 text-blue-600/100" href="https://www.app.dynamofleet.com/login" target="_blank" rel="noopener noreferrer">Login</a>
+          <a className="font-light text-inherit hover:text-blue-600 text-blue-600/100" href="https://www.app.dynamofleet.com/login" target="_blank" rel="noopener noreferrer">Login</a>
         </NavbarItem>
         <NavbarItem>
           <Button as="a" color="primary" href="https://www.app.dynamofleet.com/register" variant="flat" target="_blank" rel="noopener noreferrer">

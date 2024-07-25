@@ -13,6 +13,7 @@ import logo12 from "./assets/pw1.jpeg"
 import logo13 from "./assets/pw2.jpeg"
 import logo14 from "./assets/pw3.jpeg"
 import logo15 from "./assets/pw4.jpeg"
+import logo16 from "./assets/pw5.jpeg"
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -77,15 +78,15 @@ export default function Home() {
            
           </CardFooter>
         </Card>
-        <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7 shadow-2xl">
+        <Card  className="w-full h-[300px] col-span-12 sm:col-span-7 shadow-2xl">
         
           <Image
             removeWrapper
             alt="Relaxing app background"
             className="z-0 w-full h-full object-cover"
-            src={logo15}
+            src={logo16}
           />
-          <CardFooter className="absolute p-1 bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+          <CardFooter className="absolute p-1  top-0 z-10  border-default-600 dark:border-default-100">
             <div className="flex flex-grow gap-2 items-center">
              
               <div className="flex flex-col">
