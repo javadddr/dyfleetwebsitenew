@@ -9,6 +9,7 @@ import LegalNotice from './LegalNotice';
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
 import Impressum from './Impressum';
+import Learn from "./Learn";
 export default function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/impressum" element={<Impressum />} />
+          <Route path="/learn" element={<Learn />} />
           <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer/>

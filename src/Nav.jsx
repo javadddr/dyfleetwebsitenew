@@ -54,7 +54,7 @@ console.log(isMenuOpen)
         </NavbarItem>
         <div className="border-l border-gray-300 h-8 mx-1"></div>
         <NavbarItem>
-          <a className="font-light text-inherit hover:text-blue-600" href="https://www.app.dynamofleet.com/demo" target="_blank" rel="noopener noreferrer">Learn more</a>
+          <a className="font-light text-inherit hover:text-blue-600" href="/learn"  rel="noopener noreferrer">Learn more</a>
         </NavbarItem>
       </NavbarContent>
 

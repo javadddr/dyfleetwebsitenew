@@ -65,7 +65,7 @@ export default function HomeTop() {
             </Button>
 
             
-            <a href="https://www.app.dynamofleet.com/demo" className="text-sm font-semibold leading-6 text-gray-900">
+            <a href="/learn" className="text-sm font-semibold leading-6 text-gray-900">
             Learn more <span aria-hidden="true">→</span>
             </a>
 
