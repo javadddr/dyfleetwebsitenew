@@ -31,7 +31,7 @@ export default function Home() {
 
 
 
-      <div className={`flex justify-center relative ${isLoaded ? 'animate-fadeIn' : 'opacity-0'}`}>
+      {/* <div className={`flex justify-center relative ${isLoaded ? 'animate-fadeIn' : 'opacity-0'}`}>
         <div className=" max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8 pt-6 pb-6 flex justify-center items-center">
         <Card className="col-span-12 sm:col-span-4 h-[300px] shadow-2xl ">
           <CardHeader className="absolute z-10 bottom-0 flex-col !items-start">
@@ -105,7 +105,7 @@ export default function Home() {
           </CardFooter>
         </Card>
         </div>
-      </div>
+      </div> */}
 
       <HomeB/>
       <HomeB1/>
