@@ -4,8 +4,9 @@ import HomeTop from "./HomeTop";
 import HomeB from "./HomeB";
 import HomeB1 from "./HomeB1";
 import HomeB2 from "./HomeB2";
-
+import Hero2 from "./Hero2";
 import Pricing from "./Pricing";
+
 import HomeB3 from "./HomeB3";
 import HomeB4 from "./HomeB4";
 import logo11 from "./assets/pw.jpeg"
@@ -14,6 +15,7 @@ import logo13 from "./assets/pw2.jpeg"
 import logo14 from "./assets/pw3.jpeg"
 import logo15 from "./assets/pw4.jpeg"
 import logo16 from "./assets/pw5.jpeg"
+
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -23,7 +25,12 @@ export default function Home() {
   return (
     <div>
       <HomeTop/>
-    
+  
+<Hero2/>
+
+
+
+
       <div className={`flex justify-center relative ${isLoaded ? 'animate-fadeIn' : 'opacity-0'}`}>
         <div className=" max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8 pt-6 pb-6 flex justify-center items-center">
         <Card className="col-span-12 sm:col-span-4 h-[300px] shadow-2xl ">

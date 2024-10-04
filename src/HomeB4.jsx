@@ -60,7 +60,7 @@ export default function HomeB4() {
    <Image
      removeWrapper
      alt="Relaxing app background"
-     className="z-0 w-full  h-full object-cover "
+     className="z-0 w-full  h-[110%] object-cover "
      src={logofgd}
    />
 
