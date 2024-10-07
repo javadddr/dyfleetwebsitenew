@@ -36,7 +36,7 @@ export default function Home() {
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ actionName: 'Home Page' }),
+            body: JSON.stringify({ actionName: 'HomePage' }),
           });
           if (response.ok) {
           
@@ -54,7 +54,7 @@ export default function Home() {
   
     // Call the trackHomeVisit function when the Home component mounts
     trackHomeVisit();
-  }, []);
+  }, [1]);
   return (
     <div>
       <HomeTop/>

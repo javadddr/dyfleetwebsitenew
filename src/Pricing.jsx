@@ -27,7 +27,24 @@ export default function Pricing() {
   const handleTabChange = (key) => {
     setSelectedKey(key);
   };
-
+  const trackAction = async (actionName) => {
+    try {
+      const response = await fetch('https://api.dynamofleet.com/dywebsite/trackAction', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ actionName }),
+      });
+      if (response.ok) {
+       
+      } else {
+      
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
   const pricePerVehicle = selectedKey === "annually" ? 4 : 5;
 
   return (
@@ -100,6 +117,7 @@ export default function Pricing() {
                   <a
                     href="https://www.app.dynamofleet.com/register"
                     className="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    onClick={() => { trackAction(' Register here!')}}
                   >
                     Register here!
                   </a>

@@ -33,7 +33,7 @@ function Learn() {
       <CardBody className="overflow-visible py-2">
       <iframe 
         className=" aspect-video " 
-        src="https://www.youtube.com/embed/rZermpZvL_4" 
+        src="https://www.youtube.com/embed/sboWdBLJUv0" 
         title="YouTube video player" 
         frameBorder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

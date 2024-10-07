@@ -9,7 +9,24 @@ export default function HomeTop() {
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-
+  const trackAction = async (actionName) => {
+    try {
+      const response = await fetch('https://api.dynamofleet.com/dywebsite/trackAction', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ actionName }),
+      });
+      if (response.ok) {
+       
+      } else {
+      
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
   useEffect(() => {
     const options = {
       strings: ['fleet', 'vehicles', 'drivers'],
@@ -60,12 +77,13 @@ export default function HomeTop() {
               href="https://www.app.dynamofleet.com/register"
               target="_blank" // optional, to open in a new tab
               rel="noopener noreferrer" // optional, for security reasons
+              onClick={() => { trackAction('Sign Up-Hero')}}
             >
               Sign Up Now
             </Button>
 
             
-            <a href="/learn" className="text-sm font-semibold leading-6 text-gray-900">
+            <a href="/learn" className="text-sm font-semibold leading-6 text-gray-900"  onClick={() => { trackAction(' Learn more-Hero')}}>
             Learn more <span aria-hidden="true">→</span>
             </a>
 
