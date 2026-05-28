@@ -101,7 +101,7 @@ function TermsOfService() {
 
 <p>Questions about the Terms of Service should be sent to us at contact@dynamofleet.com. Our contact information is posted below:</p>
 
-<p>DynamoChart UG Holzheimer Weg 11 41464 Neuss Germany +49 1515 6338464 contact@dynamofleet.com www.dynamofleet.com</p>
+<p>DynamoChart UG Lise-Meitner-Straße 25 06122 Halle (Saale) Germany +49 1515 6338464 contact@dynamofleet.com www.dynamofleet.com</p>
       </div>
       <Footer />
     </div>

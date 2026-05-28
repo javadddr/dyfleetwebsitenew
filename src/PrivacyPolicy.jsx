@@ -11,7 +11,7 @@ function PrivacyPolicy() {
 
 <p>Der Verantwortliche (&#8222;wir&ldquo;) im Sinne der Datenschutz-Grundverordnung und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die:</p>
 
-<p>DynamoChart UG Holzheimer Weg 11 41464 Neuss Germany</p>
+<p>DynamoChart UG Lise-Meitner-Straße 25 06122 Halle (Saale) Germany</p>
 
 <p>Telefon: (+49) 1515 6338464 E-Mail: datenschutz@dynamofleet.com</p>
 

@@ -17,8 +17,8 @@ const LegalNotice = () => {
 
       <address className="legal-notice-address">
         DynamoChart UG<br />
-        Holzheimer Weg 11<br />
-        41464 Neuss<br />
+        Lise-Meitner-Straße 25<br />
+        06122 Halle (Saale)<br />
         Germany
       </address>
 

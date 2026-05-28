@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import LegalNotice from './LegalNotice';
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
+import Email from "./Email";
 import Impressum from './Impressum';
 import Learn from "./Learn";
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/crm" element={<Email />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/legal-notice" element={<LegalNotice />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

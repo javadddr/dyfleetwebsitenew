@@ -11,7 +11,7 @@ function Impressum() {
 
 <p>Angaben gem&auml;&szlig; &sect; 5 TMG</p>
 
-<p>DynamoChart UG Holzheimer Weg 11 41464 Neuss</p>
+<p>DynamoChart UG Lise-Meitner-Straße 25 06122 Halle (Saale), Germany</p>
 
 <p>Kontakt: Telefon: +49 1515 6338464 E-Mail: hello@dyamofleet.com<br></br><br></br> <strong>Gesch&auml;ftsf&uuml;hrer:</strong> <br></br>Javad Khalil Arjmandi<br></br>Johannes Hendrik Frederik Kist</p>
 

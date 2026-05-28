@@ -18,8 +18,8 @@ function Footer() {
    
       <div className="footer-company-info">
         <h1>DynamoChart UG</h1>
-        <p>Holzheimer Weg 11</p>
-        <p>41464 Neuss, Germany</p>
+        <p>Lise-Meitner-Straße 25</p>
+        <p>06122 Halle (Saale), Germany</p>
         <p>Internet: <a href="https://DynamoFleet.com/" className="footer-link">DynamoFleet.com</a></p>
         <p>Contact: <a href="mailto:Hello@DynamoFleet.com" className="footer-link">Contact@DynamoFleet.com</a></p>
         <p>Sitz der Gesellschaft/Registered office:<span> Neuss</span></p>
